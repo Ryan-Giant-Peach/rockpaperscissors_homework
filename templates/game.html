@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+{% block content %}
+
+<p> {{player_1.name}} chooses {{player_1.choice}} </p>
+
+<p> {{player_2.name}} chooses {{player_2.choice}} </p>
+
+<h3>The winner is...</h3>
+
+{% if winner != None %}
+<p>{{winner.name}} wins by playing {{winner.choice}}</p>
+{% else %}
+<p>Nobody wins... but nobody lost either!</p>
+{% endif %}
+
+
+{% endblock %}
